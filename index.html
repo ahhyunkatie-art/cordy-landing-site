@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CORD:Y | 2026.08.01 Coming Soon</title>
+    <meta
+      name="description"
+      content="구름처럼 포근하고 유리처럼 반짝이는 기능성 이어폰 줄감개 CORD:Y. 2026년 8월 1일 출시."
+    />
+    <link
+      rel="stylesheet"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="nav-logo" href="index.html">CORD:Y</a>
+      <nav class="nav" aria-label="주요 메뉴">
+        <a href="index.html" aria-current="page">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="shop.html">Shop</a>
+      </nav>
+    </header>
+
+    <main class="home-shell">
+      <section class="countdown-hero" aria-labelledby="home-title">
+        <div class="dream-layer" aria-hidden="true">
+          <span class="cloud cloud-a"></span>
+          <span class="cloud cloud-b"></span>
+          <span class="cloud cloud-c"></span>
+          <span class="sparkle sparkle-a"></span>
+          <span class="sparkle sparkle-b"></span>
+          <span class="sparkle sparkle-c"></span>
+        </div>
+
+        <div class="brand-logo" aria-label="CORD:Y 로고">
+          <img src="assets/logo-transparent.png" alt="CORD:Y" onerror="this.src='assets/logo.png';" />
+          <span>Cord:Y</span>
+        </div>
+
+        <p class="kicker">Angel Protocol · Earphone Winder</p>
+        <h1 id="home-title">2026.08.01 Coming Soon</h1>
+        <p class="d-day" id="dDay" aria-live="polite">D-000</p>
+        <p class="hero-copy">
+          꼬이는 이어폰 선을 구름처럼 부드럽게 감싸고, 유리처럼 반짝이는
+          취향으로 정리하세요.
+        </p>
+
+        <button class="button glass-button" id="openNotify" type="button">
+          출시 알림 받기
+        </button>
+
+        <form class="notify-form is-hidden" id="notifyForm">
+          <label>
+            이메일
+            <input type="email" name="email" placeholder="hello@example.com" required />
+          </label>
+          <button class="button primary" type="submit">알림 신청하기</button>
+          <p class="form-note" role="status"></p>
+        </form>
+
+        <div class="product-showcase" aria-label="제품 이미지 영역">
+          <img src="assets/item-revised-transparent.png" alt="날개 모양 기능성 이어폰 줄감개 제품 이미지" onload="this.nextElementSibling.style.display='none';" onerror="this.src='assets/item image revised.png';" />
+          <div class="product-fallback">
+            <div class="halo"></div>
+            <div class="wing wing-left"></div>
+            <div class="wing wing-right"></div>
+            <div class="product-core">
+              <div class="glass-star"></div>
+              <div class="cord-ring"></div>
+              <div class="earbuds"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
