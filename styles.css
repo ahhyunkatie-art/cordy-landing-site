@@ -1,4 +1,4 @@
-﻿:root {
+:root {
   --ink: #26304d;
   --muted: #7d86ad;
   --sky: #d9f2ff;
@@ -921,4 +921,3 @@ input:focus {
     grid-row: auto;
   }
 }
-
