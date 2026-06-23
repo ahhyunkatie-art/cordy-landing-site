@@ -1,4 +1,4 @@
-const FORM_ENDPOINT = "";
+const FORM_ENDPOINT = "https://formspree.io/f/xpqgwleo";
 
 function updateCountdown() {
   const el = document.querySelector("[data-launch-date]");

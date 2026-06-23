@@ -6,4 +6,4 @@ CORD:Y GitHub Pages 업로드 파일입니다.
 업로드 후 접속 주소:
 https://ahhyunkatie-art.github.io/cordy-landing-site/
 
-이메일 수집을 실제로 저장하려면 script.js의 FORM_ENDPOINT에 Formspree 엔드포인트를 넣어야 합니다.
+이메일 신청은 Formspree 폼 https://formspree.io/f/xpqgwleo 로 전송됩니다.
