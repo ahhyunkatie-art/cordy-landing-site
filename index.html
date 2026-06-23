@@ -17,7 +17,9 @@
   </head>
   <body>
     <header class="site-header">
-      <a class="nav-logo" href="index.html">CORD:Y</a>
+      <a class="nav-logo" href="index.html">
+        <img src="new logo clean.png" alt="CORD:Y" />
+      </a>
       <nav class="nav" aria-label="주요 메뉴">
         <a href="index.html" aria-current="page">Home</a>
         <a href="about.html">About Us</a>
@@ -36,38 +38,31 @@
           <span class="sparkle sparkle-c"></span>
         </div>
 
-        <div class="brand-logo" aria-label="CORD:Y 로고">
-          <img src="logo-transparent.png" alt="CORD:Y" onerror="this.src='logo.png';" />
-          <span>Cord:Y</span>
+        <div class="launch-panel">
+          <p class="kicker">Angel Protocol · Earphone Winder</p>
+          <h1 id="home-title">2026.08.01 Coming Soon</h1>
+          <p class="d-day" id="dDay" aria-live="polite">D-000</p>
+          <button class="button glass-button" id="openNotify" type="button">
+            출시 알림 받기
+          </button>
+
+          <form class="notify-form is-hidden" id="notifyForm">
+            <label>
+              이메일
+              <input type="email" name="email" placeholder="hello@example.com" required />
+            </label>
+            <input type="hidden" name="source" value="CORD:Y launch landing" />
+            <button class="button primary" type="submit">알림 신청하기</button>
+            <p class="form-note" role="status"></p>
+          </form>
         </div>
-
-        <p class="kicker">Angel Protocol · Earphone Winder</p>
-        <h1 id="home-title">2026.08.01 Coming Soon</h1>
-        <p class="d-day" id="dDay" aria-live="polite">D-000</p>
-        <p class="hero-copy">
-          꼬이는 이어폰 선을 구름처럼 부드럽게 감싸고, 유리처럼 반짝이는
-          취향으로 정리하세요.
-        </p>
-
-        <button class="button glass-button" id="openNotify" type="button">
-          출시 알림 받기
-        </button>
-
-        <form class="notify-form is-hidden" id="notifyForm">
-          <label>
-            이메일
-            <input type="email" name="email" placeholder="hello@example.com" required />
-          </label>
-          <button class="button primary" type="submit">알림 신청하기</button>
-          <p class="form-note" role="status"></p>
-        </form>
 
         <div class="product-showcase" aria-label="제품 이미지 영역">
           <img
-            src="item-revised-transparent.png"
-            alt="날개 모양 기능성 이어폰 줄감개 제품 이미지"
+            src="new new product clean.png"
+            alt="크리스탈 날개 모양 기능성 이어폰 줄감개 제품 이미지"
             onload="this.nextElementSibling.style.display='none';"
-            onerror="this.src='item image revised.png';"
+            onerror="this.src='new new product.jpg';"
           />
           <div class="product-fallback">
             <div class="halo"></div>
