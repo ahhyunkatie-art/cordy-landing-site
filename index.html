@@ -4,14 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>CORD:Y | 2026.08.01 Coming Soon</title>
-    <meta name="description" content="선이 꼬이지 않는 예쁜 패션형 이어폰 줄감개 CORD:Y. 2026년 8월 1일 출시." />
-    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
+    <meta
+      name="description"
+      content="구름처럼 포근하고 유리처럼 반짝이는 기능성 이어폰 줄감개 CORD:Y. 2026년 8월 1일 출시."
+    />
+    <link
+      rel="stylesheet"
+      crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
+    />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="page-home">
+  <body>
     <header class="site-header">
-      <a class="brand-mark" href="index.html" aria-label="CORD:Y home">
-        <img src="new-logo-clean.png" alt="CORD:Y" />
+      <a class="nav-logo" href="index.html">
+        <img src="new logo clean.png" alt="CORD:Y" />
       </a>
       <nav class="nav" aria-label="주요 메뉴">
         <a href="index.html" aria-current="page">Home</a>
@@ -20,30 +27,53 @@
       </nav>
     </header>
 
-    <main>
-      <section class="home-hero" aria-labelledby="home-title">
-        <img class="home-bg-stack" src="home-bg-stacked.png" alt="CORD:Y mood board" />
-        <div class="home-overlay">
-          <div class="launch-panel glass-panel">
-            <p class="eyebrow">Angel Protocol · Earphone Winder</p>
-            <p class="launch-date">2026.08.01 Coming Soon</p>
-            <h1 id="home-title" class="d-day" data-launch-date="2026-08-01">D-00</h1>
-            <button class="notify-open glass-button" type="button">출시 알림 받기</button>
+    <main class="home-shell">
+      <section class="countdown-hero" aria-labelledby="home-title">
+        <div class="dream-layer" aria-hidden="true">
+          <span class="cloud cloud-a"></span>
+          <span class="cloud cloud-b"></span>
+          <span class="cloud cloud-c"></span>
+          <span class="sparkle sparkle-a"></span>
+          <span class="sparkle sparkle-b"></span>
+          <span class="sparkle sparkle-c"></span>
+        </div>
 
-            <form class="notify-form glass-panel" id="notifyForm">
-              <label for="email">출시 소식을 받을 이메일</label>
-              <div class="form-row">
-                <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" required />
-                <button class="glass-button" type="submit">신청하기</button>
-              </div>
-              <input type="hidden" name="source" value="home" />
-              <p class="form-message" role="status"></p>
-            </form>
+        <div class="launch-panel">
+          <p class="kicker">Angel Protocol · Earphone Winder</p>
+          <h1 id="home-title">2026.08.01 Coming Soon</h1>
+          <p class="d-day" id="dDay" aria-live="polite">D-000</p>
+          <button class="button glass-button" id="openNotify" type="button">
+            출시 알림 받기
+          </button>
+
+          <form class="notify-form is-hidden" id="notifyForm">
+            <label>
+              이메일
+              <input type="email" name="email" placeholder="hello@example.com" required />
+            </label>
+            <input type="hidden" name="source" value="CORD:Y launch landing" />
+            <button class="button primary" type="submit">알림 신청하기</button>
+            <p class="form-note" role="status"></p>
+          </form>
+        </div>
+
+        <div class="product-showcase" aria-label="제품 이미지 영역">
+          <img
+            src="new new product clean.png"
+            alt="크리스탈 날개 모양 기능성 이어폰 줄감개 제품 이미지"
+            onload="this.nextElementSibling.style.display='none';"
+            onerror="this.src='new new product.jpg';"
+          />
+          <div class="product-fallback">
+            <div class="halo"></div>
+            <div class="wing wing-left"></div>
+            <div class="wing wing-right"></div>
+            <div class="product-core">
+              <div class="glass-star"></div>
+              <div class="cord-ring"></div>
+              <div class="earbuds"></div>
+            </div>
           </div>
-
-          <a class="home-product-link" href="product.html" aria-label="CORD:Y 제품 상세 보기">
-            <img class="home-product" src="new-product-clean.png" alt="CORD:Y crystal wing earphone winder" />
-          </a>
         </div>
       </section>
     </main>

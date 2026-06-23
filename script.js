@@ -1,64 +1,49 @@
+const launchDate = new Date("2026-08-01T00:00:00+09:00");
 const FORM_ENDPOINT = "https://formspree.io/f/xpqgwleo";
 
-function updateCountdown() {
-  const el = document.querySelector("[data-launch-date]");
-  if (!el) return;
+const dDay = document.querySelector("#dDay");
+const openNotify = document.querySelector("#openNotify");
+const form = document.querySelector("#notifyForm");
+const note = document.querySelector(".form-note");
 
-  const launch = new Date(`${el.dataset.launchDate}T00:00:00+09:00`);
-  const today = new Date();
-  const todayKst = new Date(today.toLocaleString("en-US", { timeZone: "Asia/Seoul" }));
-  todayKst.setHours(0, 0, 0, 0);
+function renderDday() {
+  if (!dDay) return;
 
-  const diff = launch.getTime() - todayKst.getTime();
-  const days = Math.max(0, Math.ceil(diff / 86400000));
-  el.textContent = `D-${String(days).padStart(2, "0")}`;
+  const now = new Date();
+  const diff = launchDate.getTime() - now.getTime();
+  const days = Math.max(0, Math.ceil(diff / (1000 * 60 * 60 * 24)));
+  dDay.textContent = `D-${String(days).padStart(2, "0")}`;
 }
 
-function setupNotifyForm() {
-  const openButton = document.querySelector(".notify-open");
-  const form = document.querySelector(".notify-form");
-  const message = document.querySelector(".form-message");
+renderDday();
 
-  if (openButton && form) {
-    openButton.addEventListener("click", () => {
-      form.classList.add("is-open");
-      form.querySelector("input[type='email']")?.focus();
-      form.scrollIntoView({ behavior: "smooth", block: "center" });
-    });
+openNotify?.addEventListener("click", () => {
+  form?.classList.remove("is-hidden");
+  form?.querySelector("input")?.focus();
+});
+
+form?.addEventListener("submit", async (event) => {
+  event.preventDefault();
+
+  if (!FORM_ENDPOINT) {
+    note.textContent = "수집함 설정이 필요합니다. Formspree 엔드포인트를 script.js에 연결해 주세요.";
+    return;
   }
 
-  if (!form) return;
+  note.textContent = "알림 신청을 저장하는 중입니다.";
 
-  form.addEventListener("submit", async (event) => {
-    event.preventDefault();
+  try {
+    const response = await fetch(FORM_ENDPOINT, {
+      method: "POST",
+      body: new FormData(form),
+      headers: { Accept: "application/json" },
+    });
 
-    if (!FORM_ENDPOINT) {
-      message.textContent = "수집함 설정이 필요합니다. Formspree 엔드포인트를 script.js에 연결해 주세요.";
-      message.className = "form-message is-warning";
-      return;
-    }
+    if (!response.ok) throw new Error("Form submission failed");
 
-    message.textContent = "신청 중입니다...";
-    message.className = "form-message";
-
-    try {
-      const response = await fetch(FORM_ENDPOINT, {
-        method: "POST",
-        body: new FormData(form),
-        headers: { Accept: "application/json" },
-      });
-
-      if (!response.ok) throw new Error("request failed");
-
-      form.reset();
-      message.textContent = "출시 알림 신청이 완료되었습니다.";
-      message.className = "form-message is-success";
-    } catch {
-      message.textContent = "잠시 후 다시 시도해 주세요.";
-      message.className = "form-message is-warning";
-    }
-  });
-}
-
-updateCountdown();
-setupNotifyForm();
+    note.textContent = "알림 신청이 완료되었습니다. 8월 1일 소식을 전해드릴게요.";
+    form.reset();
+  } catch {
+    note.textContent = "저장 중 문제가 생겼습니다. 잠시 후 다시 시도해 주세요.";
+  }
+});
