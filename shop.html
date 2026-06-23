@@ -4,21 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Shop | CORD:Y</title>
-    <meta
-      name="description"
-      content="CORD:Y 기능성 이어폰 줄감개 출시 예정 상품과 커스텀 파츠를 확인하세요."
-    />
-    <link
-      rel="stylesheet"
-      crossorigin
-      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css"
-    />
+    <meta name="description" content="CORD:Y 기능성 이어폰 줄감개와 커스터마이징 파츠를 만나보세요." />
+    <link rel="stylesheet" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css" />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
+  <body class="page-sub page-shop">
     <header class="site-header">
-      <a class="nav-logo" href="index.html">
-        <img src="new logo clean.png" alt="CORD:Y" />
+      <a class="brand-mark" href="index.html" aria-label="CORD:Y home">
+        <img src="new-logo-clean.png" alt="CORD:Y" />
       </a>
       <nav class="nav" aria-label="주요 메뉴">
         <a href="index.html">Home</a>
@@ -28,63 +21,40 @@
     </header>
 
     <main class="sub-page">
-      <section class="sub-hero">
-        <p class="kicker">Shop Preview</p>
-        <h1>첫 번째 CORD:Y 라인업.</h1>
-        <p>
-          2026년 8월 1일 출시 예정입니다. 현재는 상품 미리보기와 출시 알림 신청을 준비 중입니다.
-        </p>
+      <section class="page-title glass-panel">
+        <p class="eyebrow">Shop</p>
+        <h1>첫 출시를 준비 중입니다.</h1>
+        <p>CORD:Y 본품과 커스터마이징 파츠는 2026년 8월 1일 공개됩니다.</p>
       </section>
 
       <section class="shop-grid">
-        <article class="shop-card product-detail">
-          <a class="shop-image" href="product.html" aria-label="Angel Winder Cloud White 상세 페이지 보기">
-            <img
-              src="new new product clean.png"
-              alt="CORD:Y 기능성 이어폰 줄감개 제품 이미지"
-              onload="this.nextElementSibling.style.display='none';"
-              onerror="this.src='new new product.jpg';"
-            />
-            <div class="shop-image-fallback">
-              <div class="mini-wing left"></div>
-              <div class="mini-wing right"></div>
-              <div class="mini-core"></div>
-            </div>
-          </a>
-          <div class="shop-copy">
-            <span>COMING SOON</span>
-            <h2>Angel Winder · Cloud White</h2>
-            <p>폭신한 날개와 별 키링 무드를 담은 기능성 이어폰 줄감개.</p>
-            <div class="price-row">
-              <strong>9,900원</strong>
-              <small>첫 출시 예상가</small>
-            </div>
-            <div class="option-row" aria-label="상품 옵션">
-              <button type="button">Cloud White</button>
-              <button type="button">Sky Blue Parts</button>
-              <button type="button">Lavender Parts</button>
-            </div>
-            <div class="shop-actions">
-              <a class="button primary shop-button" href="product.html">제품 상세 보기</a>
-              <a class="button glass-button shop-button" href="index.html#notifyForm">출시 알림 받기</a>
-            </div>
+        <a class="product-card glass-card featured-product" href="product.html">
+          <div class="product-image-wrap">
+            <img src="new-product-clean.png" alt="CORD:Y crystal wing earphone winder" />
           </div>
-        </article>
+          <div class="product-info">
+            <p class="eyebrow">Main Product</p>
+            <h2>CORD:Y Angel Protocol</h2>
+            <p>선 꼬임을 줄이고 키링처럼 연출할 수 있는 크리스탈 윙 이어폰 줄감개.</p>
+            <span class="price">₩12,900 예정</span>
+            <span class="detail-link">상세 페이지 보기</span>
+          </div>
+        </a>
 
-        <article class="shop-card">
-          <div class="swatch sky coming-soon-art" data-text="COMING SOON"></div>
-          <h2>Sky Blue Parts</h2>
-          <p>하늘빛 파츠 세트</p>
+        <article class="coming-card glass-card">
+          <span class="coming-soon">Coming Soon</span>
+          <h2>Star Charm Parts</h2>
+          <p>별 모양 키링 파츠와 메탈 체인 조합.</p>
         </article>
-        <article class="shop-card">
-          <div class="swatch violet coming-soon-art" data-text="COMING SOON"></div>
-          <h2>Lavender Parts</h2>
-          <p>연보라 파츠 세트</p>
+        <article class="coming-card glass-card">
+          <span class="coming-soon">Coming Soon</span>
+          <h2>Glass Heart Parts</h2>
+          <p>맑은 하트 실루엣으로 완성하는 한정 파츠.</p>
         </article>
-        <article class="shop-card">
-          <div class="swatch metal coming-soon-art" data-text="COMING SOON"></div>
-          <h2>Metal Charm</h2>
-          <p>반짝이는 키링 참</p>
+        <article class="coming-card glass-card">
+          <span class="coming-soon">Coming Soon</span>
+          <h2>Season Color Kit</h2>
+          <p>계절과 취향에 맞춰 바꾸는 컬러 키트.</p>
         </article>
       </section>
     </main>
